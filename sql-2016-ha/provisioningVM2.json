@@ -70,7 +70,6 @@
     "variables": {
         "sqlstorageName": "[parameters('sqlStorageAccountName')]",
         "fwstorageName": "[concat(uniquestring(parameters('sqlStorageAccountName')), 'fsw')]",
-        "diagstorageName": "[concat(uniquestring(parameters('sqlStorageAccountName')), 'diag')]",
         "SQL2016SP1-WS2016-ENT": "SQL2016SP1-WS2016",
         "SQL2016SP1-WS2016-DEV": "SQL2016SP1-WS2016",
         "SQL2016SP1-WS2016-STD": "SQL2016SP1-WS2016"
@@ -157,8 +156,7 @@
             },
             "diagnosticsProfile": {
                 "bootDiagnostics": {
-                    "enabled": "true",
-                    "storageUri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('diagstorageName')),providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).primaryEndpoints.blob)]"
+                    "enabled": "false"
                 }
             }
         }
@@ -220,8 +218,7 @@
             },
             "diagnosticsProfile": {
                 "bootDiagnostics": {
-                    "enabled": "true",
-                    "storageUri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('diagstorageName')),providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).primaryEndpoints.blob)]"
+                    "enabled": "false"
                 }
             }
         }

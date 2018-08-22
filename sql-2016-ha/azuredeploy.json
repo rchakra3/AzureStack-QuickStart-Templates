@@ -19,36 +19,39 @@
             "allowedValues": [
                 "Standard_A1",
                 "Standard_A2",
-                "Standard_A3"
+                "Standard_A3",
+		"Standard_DS1_v2"
             ],
             "metadata": {
                 "description": "The size of the AD VMs Created"
             },
-            "defaultValue": "Standard_A2"
+            "defaultValue": "Standard_DS1_v2"
         },
         "sqlVMSize": {
             "type": "string",
             "allowedValues": [
                 "Standard_A1",
                 "Standard_A2",
-                "Standard_A3"
+                "Standard_A3",
+		"Standard_DS4_v2"
             ],
             "metadata": {
                 "description": "The size of the SQL VMs Created"
             },
-            "defaultValue": "Standard_A3"
+            "defaultValue": "Standard_DS4_v2"
         },
         "witnessVMSize": {
             "type": "string",
             "allowedValues": [
                 "Standard_A1",
                 "Standard_A2",
-                "Standard_A3"
+                "Standard_A3",
+		"Standard_DS1_v2"
             ],
             "metadata": {
                 "description": "The size of the Witness VM Created"
             },
-            "defaultValue": "Standard_A1"
+            "defaultValue": "Standard_DS1_v2"
         },
         "vmDiskSize": {
             "type": "string",
@@ -75,7 +78,7 @@
             "metadata": {
                 "description": "The DNS Suffix for reverse lookup of public IPAddresses "
             },
-            "defaultValue": "azurestack.external"
+            "defaultValue": "azure.com"
         },
         "sqlServerServiceAccountUserName": {
             "type": "string",
@@ -119,21 +122,21 @@
             "metadata": {
                 "description": "The type of the Sql Server Storage Account created"
             },
-            "defaultValue": "Standard_LRS"
+            "defaultValue": "Premium_LRS"
         },
         "platformFaultDomainCount": {
             "type": "int",
             "metadata": {
                 "description": "Fault Domain Count Integer"
             },
-            "defaultValue": "1"
+            "defaultValue": 3
         },
         "platformUpdateDomainCount": {
             "type": "int",
             "metadata": {
                 "description": "Update Domain Count Integer"
             },
-            "defaultValue": "1"
+            "defaultValue": 3
         },
         "virtualNetworkAddressRange": {
             "type": "string",
@@ -182,14 +185,14 @@
             "metadata": {
                 "description": "Linked Templates base url"
             },
-            "defaultValue": "https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sql-2016-ha"
+            "defaultValue": "https://raw.githubusercontent.com/rchakra3/AzureStack-QuickStart-Templates/master/sql-2016-ha"
         },
         "scriptsBaseUrl": {
             "type": "string",
             "metadata": {
                 "description": "DSC Scripts base url"
             },
-            "defaultValue": "https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sql-2016-ha"
+            "defaultValue": "https://raw.githubusercontent.com/rchakra3/AzureStack-QuickStart-Templates/master/sql-2016-ha"
         },
         "autoPatchingDay": {
             "type": "string",

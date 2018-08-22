@@ -77,16 +77,6 @@
             "kind": "Storage"
         },
         {
-            "type": "Microsoft.Storage/storageAccounts",
-            "name": "[concat(uniquestring(parameters('sqlStorageAccountName')), 'diag')]",
-            "apiVersion": "2016-01-01",
-            "location": "[parameters('location')]",
-            "sku": {
-                "name": "[parameters('SqlStorageAccountType')]"
-            },
-            "kind": "Storage"
-        },
-        {
             "apiVersion": "2015-06-15",
             "type": "Microsoft.Network/publicIPAddresses",
             "name": "[parameters('primaryDCIPAddressNameWithSuffix')]",

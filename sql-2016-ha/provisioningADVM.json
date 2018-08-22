@@ -52,8 +52,7 @@
         }
     },
     "variables": {
-        "dcstorageName": "[parameters('dcStorageAccountName')]",
-        "diagstorageName": "[concat(uniquestring(parameters('sqlStorageAccountName')), 'diag')]"
+        "dcstorageName": "[parameters('dcStorageAccountName')]"
     },
   "resources": [
     {
@@ -119,8 +118,7 @@
             },
             "diagnosticsProfile": {
                 "bootDiagnostics": {
-                    "enabled": "true",
-                    "storageUri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('diagstorageName')),providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).primaryEndpoints.blob)]"
+                    "enabled": false
                 }
             }
         },

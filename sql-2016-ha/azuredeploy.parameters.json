@@ -5,11 +5,17 @@
         "domainName": {
             "value": "contoso.local"
         },
-        "sqlServerServiceAccountUserName": {
-            "value": "sqlservice"
-        },
         "adminUsername": {
-            "value": "lcladmin"
-        }
+            "value": "azbetsqluser"
+        },
+	"adminPassword": {
+	    "value": "AzBet#123456"
+	},
+	"sqlServerServiceAccountPassword": {
+	    "value": "AzBet#123456"
+	},
+	"sqlAuthPassword": {
+	    "value": "AzBet#123456"
+	}
     }
 }
